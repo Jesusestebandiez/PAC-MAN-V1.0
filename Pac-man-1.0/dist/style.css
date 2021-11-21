@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
+  background: #2b2b2b;
+  color: #fff;
+  position: relative;
+  width: 600px;
+/*   perspective: 1000px; */
+}
+
+#app {
+/*   z-index: 1000; */
+}
+
+#maze {
+  z-index: 2000;
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  transform: rotateX(30deg);
+}
+
+#maze2 {
+  z-index: -1;
+  position: absolute;
+  top: 25px;
+  left: 80px;
+  opacity: 0.2;
+  transform: rotateX(30deg);
+}
+
+#maze path {
+/*   fill: blue;
+  animation-name: animate-maze;
+  animation-duration: 10s;
+  animation-iteration-count: infinite; */
+}
+
+@keyframes animate-maze {
+    0%   {fill: blue;}
+    25%  {fill: red;}
+    50%  {fill: yellow;}
+    75%  {fill: green;}
+    100% {fill: blue;}
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.game:focus{
+  outline: none;
+}
+
+.player {
+    z-index: 100;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  position: absolute;
+  background-image: url('');
+  background: url('http://math.ucr.edu/home/baez/mathematical/cube.png') center center no-repeat;
+  background-size: cover;
+/*   transition: all 200ms linear; */
+}
+
+.board {
+  margin: 0 auto;
+  position: relative;
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  width: 560px;
+  transform: rotateX(30deg);
+}
+
+.row {
+  line-height: 0;
+}
+
+.square {
+/*   border-top: solid 1px #000;
+  border-right: solid 1px #000; */
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+}
+
+.square.wall {
+  background: transparent;
+}
+
+.square.dot {
+  background: #e8da5a;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+  margin: 7.5px;
+  box-shadow: 0px 5px 5px #1d1c1c;
+}
